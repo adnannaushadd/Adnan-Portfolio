@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adnan Mohamed Naushad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f3ee;
+    --surface: #fffdf9;
+    --text: #1c2a1f;
+    --muted: #5c6b5e;
+    --accent: #3d5a40;
+    --accent-soft: #5a7a5e;
+    --border: #e4ddd3;
+    --radius: 16px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 780px; margin: 0 auto; padding: 0 28px; }
+  nav {
+    position: sticky; top: 0; background: rgba(246,243,238,0.92); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border); z-index: 100; padding: 16px 0;
+  }
+  nav .container { display: flex; justify-content: space-between; align-items: center; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 13.5px; margin-left: 20px; font-weight: 500; letter-spacing: 0.01em; }
+  nav a:hover { color: var(--accent); }
+  .logo { font-size: 18px; color: var(--text); text-decoration: none; font-weight: 600; letter-spacing: -0.2px; }
+  header.hero { padding: 72px 0 56px; text-align: center; }
+  .hero-content { display: flex; flex-direction: column; align-items: center; }
+  h1 { font-size: 40px; font-weight: 700; letter-spacing: -0.6px; line-height: 1.1; margin-bottom: 14px; color: var(--text); }
+  .tagline { font-size: 17px; color: var(--muted); max-width: 500px; margin: 0 auto 32px; font-weight: 400; line-height: 1.5; }
+  .cta { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .btn { display: inline-block; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 500; font-size: 14px; letter-spacing: 0.01em; }
+  .btn-primary { background: var(--accent); color: white; }
+  .btn-secondary { background: transparent; border: 1.5px solid var(--border); color: var(--text); }
+  section { padding: 64px 0; border-top: 1px solid var(--border); }
+  h2 { font-size: 26px; font-weight: 600; margin-bottom: 24px; color: var(--text); letter-spacing: -0.3px; }
+  .about p { color: #3a4a3d; margin-bottom: 14px; max-width: 640px; font-size: 16px; line-height: 1.65; }
+  .grid { display: grid; gap: 16px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 24px 26px; transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(61,90,64,0.05); }
+  .card h3 { font-size: 16.5px; font-weight: 600; margin-bottom: 4px; color: var(--text); letter-spacing: -0.1px; line-height: 1.3; }
+  .meta { font-size: 13px; color: var(--accent-soft); margin-bottom: 12px; font-weight: 500; letter-spacing: 0.01em; }
+  .card p { font-size: 15px; color: #3a4a3d; line-height: 1.6; }
+  .card strong { font-weight: 600; color: var(--text); }
+  .skills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .skill {
+    background: #eef3ef; color: var(--accent); border-radius: 999px;
+    padding: 6px 14px; font-size: 13.5px; font-weight: 500;
+  }
+  .languages { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 6px; }
+  .lang { font-size: 15px; font-weight: 400; }
+  .lang span { color: var(--muted); font-size: 13px; font-weight: 400; }
+  .contact-grid { display: grid; gap: 12px; max-width: 400px; }
+  .contact-item { display: flex; align-items: center; gap: 10px; font-size: 15px; }
+  .contact-item a { color: var(--accent); text-decoration: none; font-weight: 500; }
+  .contact-item a:hover { text-decoration: underline; }
+  footer { padding: 40px 0; text-align: center; color: var(--muted); font-size: 13.5px; border-top: 1px solid var(--border); }
+  @media (max-width: 700px) {
+    h1 { font-size: 34px; }
+    .tagline { font-size: 16px; }
+    nav a { margin-left: 12px; font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="container">
+    <a href="#" class="logo">Adnan Naushad</a>
+    <div>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div>
+        <h1>Adnan Mohamed Naushad</h1>
+        <p class="tagline">First-year BBA student at TAPMI Bengaluru. Focused on building through ownership, people, and real experience.</p>
+        <div class="cta">
+          <a href="#contact" class="btn btn-primary">Get in touch</a>
+          <a href="https://www.linkedin.com/in/adnan-naushad-300ba62b8" target="_blank" class="btn btn-secondary">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container">
+    <h2>About</h2>
+    <div class="about">
+      <p>I’m Adnan Mohamed Naushad, a 19-year-old first-year student at T. A. Pai Management Institute, MAHE Bangalore.</p>
+      <p>I’ve always been someone who likes taking initiative, connecting with people, and figuring things out along the way. I enjoy being in environments where I can learn by doing and take ownership of whatever comes my way.</p>
+      <p>Right now, I’m focused on building a strong foundation through my studies while actively looking for opportunities that push me outside my comfort zone. My long-term goal is to build and scale businesses of my own, and I’m here to learn everything I can along the way.</p>
+      <p>Always open to meaningful conversations and new opportunities.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <h2>Experience</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Member — Corporate Engagement Committee</h3>
+        <div class="meta">TAPMI Bengaluru · Oct 2026 – Present</div>
+        <p>Contributing to corporate outreach and student engagement activities. Supporting coordination between the campus and industry partners.</p>
+      </div>
+      <div class="card">
+        <h3>Volunteer — Corporate Engagement Committee</h3>
+        <div class="meta">TAPMI Bengaluru · Aug 2026 – Oct 2026</div>
+        <p>Supported early-stage corporate engagement efforts and campus events before moving into a formal member role.</p>
+      </div>
+      <div class="card">
+        <h3>Operations Experience — Family Restaurant & Business</h3>
+        <div class="meta">Family Business · During drop year</div>
+        <p>Worked in the family restaurant and interned at my grandfather’s company. Gained hands-on exposure to daily operations, customer handling, inventory, and how a real business functions day to day.</p>
+      </div>
+      <div class="card">
+        <h3>Student Entrepreneurship</h3>
+        <div class="meta">School years · Grade 8–12</div>
+        <p>Ran multiple small ventures while in school — taking orders and sourcing products in bulk, reselling digital subscriptions across markets, and coordinating deals through personal networks. Learned sales, negotiation, pricing, and the process of turning an idea into something that actually works.</p>
+      </div>
+      <div class="card">
+        <h3>Assistant Prefect</h3>
+        <div class="meta">Birla Public School Doha · Apr 2023 – Apr 2024</div>
+        <p>Student Council role involving coordination, event support, and representing student interests.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2>Project Showcase</h2>
+    <p style="color: var(--muted); margin-bottom: 32px; max-width: 640px;">A few projects where I took ownership of specific pieces and learned by doing.</p>
+    <div class="grid">
+
+      <div class="card">
+        <h3>The World’s First AI Law — EU AI Act Analysis</h3>
+        <div class="meta">TLM · Market / News Analysis · Working Group 5</div>
+        <p style="margin-bottom: 12px;"><strong>What I did:</strong> Built the full presentation and handled the final edit across all content shared by the group. This included proofreading, tightening language, improving flow, and making sure the slides stayed clear and consistent.</p>
+        <p><strong>What I learned:</strong> How to take raw inputs from multiple people and turn them into one coherent narrative. Strengthened my editing, structure, and visual storytelling skills. Also got a clearer view of how regulation like the EU AI Act actually affects product design and go-to-market for companies exporting AI tools.</p>
+        <p style="margin-top: 14px;"><a href="Hi.pptx" download style="color: var(--accent); font-weight: 500; text-decoration: none;">View / Download Presentation →</a></p>
+      </div>
+
+      <div class="card">
+        <h3>Language, Literature & Rhetoric — Anand Mahindra Analysis</h3>
+        <div class="meta">Group Project · SOAPS + Roleplay</div>
+        <p style="margin-bottom: 12px;"><strong>What I did:</strong> Worked on the SOAPS and rhetorical analysis of an Anand Mahindra interview. Also played the role of Anand Mahindra in the group’s rebranding roleplay.</p>
+        <p><strong>What I learned:</strong> How language, audience, and purpose shape communication. Practicing the roleplay helped me think more carefully about tone, presence, and how leaders use narrative to build a brand. Improved my ability to analyse interviews and present ideas under a bit of pressure.</p>
+        <p style="margin-top: 14px;"><a href="LANGUAGE%20%2C%20LITERATURE%20%26%20RHETORIC_compressed.pdf" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">View / Download Presentation →</a></p>
+      </div>
+
+      <div class="card">
+        <h3>DIR Project — Interview with Ashwin Renju</h3>
+        <div class="meta">Music Director based in Qatar · Primary Research</div>
+        <p style="margin-bottom: 12px;"><strong>What I did:</strong> Conducted an interview with Ashwin Renju on how AI should be used in the creative and art industry. Prepared questions, guided the conversation, and captured his perspective on AI as a tool versus a replacement for the creative process.</p>
+        <p><strong>What I learned:</strong> How to run a focused interview, listen actively, and pull useful insights from a practitioner. Got a real-world view of where AI helps creative work and where it can dilute originality. Strengthened my research and communication skills.</p>
+        <p style="margin-top: 14px;"><a href="087c6442-e57b-4b7c-882d-96a979429cf4.mp4" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">Watch Interview Video →</a></p>
+      </div>
+
+      <div class="card">
+        <h3>Pop-up Health Clinic & Hospital Simulation</h3>
+        <div class="meta">Birla Public School · Grade 11 & 12</div>
+        <p style="margin-bottom: 12px;"><strong>What I did:</strong> Led a student group selected by the Bio HOD to design and execute a functioning hospital model inside a classroom for the school science exhibition. Included ICU, pharmacy, and check-up rooms. Managed team coordination and final delivery.</p>
+        <p><strong>What I learned:</strong> How to lead a group toward a clear outcome while handling different opinions. Practised planning, coordination, and staying focused on the core purpose of the project.</p>
+      </div>
+
+      <div class="card">
+        <h3>School Assemblies & Student Initiatives</h3>
+        <div class="meta">Birla Public School</div>
+        <p style="margin-bottom: 12px;"><strong>What I did:</strong> Co-managed and hosted school assemblies. Worked with peers on preparation, flow, and presentation quality.</p>
+        <p><strong>What I learned:</strong> Event coordination, public speaking in front of a larger group, and collaborating across different people to deliver something on time.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <h2>Education</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Bachelor of Business Administration</h3>
+        <div class="meta">Manipal Academy of Higher Education (TAPMI Bengaluru) · Jul 2026 – Apr 2030</div>
+        <p>Currently pursuing BBA with a focus on management, operations, and practical industry exposure.</p>
+      </div>
+      <div class="card">
+        <h3>High School Diploma</h3>
+        <div class="meta">Birla Public School Doha, Qatar · Apr 2013 – Apr 2025</div>
+        <p>Completed higher secondary education with subjects in Physics, Chemistry, Biology, and Physical Education (CBSE).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span class="skill">Strategic Planning</span>
+      <span class="skill">Team Leadership</span>
+      <span class="skill">Sales Management</span>
+      <span class="skill">Communication</span>
+      <span class="skill">Public Speaking</span>
+      <span class="skill">Event Management</span>
+      <span class="skill">Event Planning</span>
+      <span class="skill">Restaurant Management</span>
+      <span class="skill">E-Commerce</span>
+      <span class="skill">Photography</span>
+      <span class="skill">Cinematography</span>
+    </div>
+    <h3 style="margin-top: 40px; font-size: 18px; font-weight: 600; margin-bottom: 16px;">Languages</h3>
+    <div class="languages">
+      <div class="lang">English <span>· Full professional</span></div>
+      <div class="lang">Malayalam <span>· Native</span></div>
+      <div class="lang">Hindi <span>· Professional working</span></div>
+      <div class="lang">Arabic <span>· Elementary</span></div>
+      <div class="lang">Tamil <span>· Elementary</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <p style="color: var(--muted); margin-bottom: 24px; max-width: 520px;">Open to conversations about internships, collaborations, or just exchanging ideas. Based in Bengaluru.</p>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <strong>Email</strong>
+        <a href="mailto:adnannaushad06@gmail.com">adnannaushad06@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <strong>Phone</strong>
+        <a href="tel:+919746184887">+91 97461 84887</a>
+      </div>
+      <div class="contact-item">
+        <strong>LinkedIn</strong>
+        <a href="https://www.linkedin.com/in/adnan-naushad-300ba62b8" target="_blank">linkedin.com/in/adnan-naushad-300ba62b8</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Adnan Mohamed Naushad</p>
+  </div>
+</footer>
+</body>
+</html>
